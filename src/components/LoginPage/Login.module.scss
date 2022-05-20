@@ -1,0 +1,126 @@
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+$primary_color: rgb(216, 211, 211);
+
+.container {
+    background-image: url(../../images/peizaj.jpg);
+    width: 100%;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    display: flex;
+}
+
+.form_header {
+    display: flex;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: auto;
+    width: 500px;
+    height: 600px;
+    background-color: #ffffff;
+}
+
+.swapForm {
+    display: flex;
+    justify-content: center;
+
+    span {
+        cursor: pointer;
+    }
+}
+
+.form_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_block {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 3vw 5px 3vw;
+    font-size: 18px;
+}
+
+.form_input {
+    margin-left: 30px;
+    margin-right: 30px;
+    display: block;
+    margin: auto;
+    width: 100%;
+    padding: 0.75rem 0.75rem;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: $primary_color;
+    border: none;
+
+    &:focus {
+        outline: none;
+        box-shadow: 0px 0px 13px rgb(83, 94, 243);
+    }
+}
+
+.form_button_container {
+    display: flex;
+    justify-content: center;
+}
+
+.form_button {
+    background-color: $primary_color;
+    outline: none;
+    border: none;
+    font-size: 24px;
+    height: 40px;
+    width: 200px;
+    transition-duration: 500ms;
+    margin-top: 30px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgb(224, 111, 209);
+    }
+}
+
+.errorStyle {
+    box-shadow: 0px 0px 13px rgb(241, 58, 58);
+}
+
+.field_icon {
+    position: relative;
+
+    input {
+        padding-left: 3rem;
+    }
+
+    span {
+        display: block;
+        position: absolute;
+        top: 13px;
+        left: 10px;
+    }
+}
+.error{
+    font-size: 13px;
+    color:red;
+}
