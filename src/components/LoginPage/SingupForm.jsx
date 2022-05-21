@@ -5,7 +5,7 @@ import { MdAlternateEmail } from 'react-icons/md';
 import { RiLockPasswordLine } from 'react-icons/ri';
 import { ButtonSubmit } from '../fragments/ButtonSubmit';
 import Fieldjs from './Field';
-import { validateEmail, validatePassword, validateUsername } from './ValidateForm.tsx';
+import { validateEmail, validatePassword, validateUsername } from './ValidateForm';
 
 const SingupForm = () => {
 

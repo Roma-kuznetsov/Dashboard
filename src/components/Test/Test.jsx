@@ -10,7 +10,7 @@ const Test = () => {
 
     let hqader = cx({
         color: true,
-        active: isReg == 'log',
+        active: isReg === 'log',
     });
     return (
         <div>

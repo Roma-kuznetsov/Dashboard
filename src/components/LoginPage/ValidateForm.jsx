@@ -28,3 +28,10 @@ export const validateUsername = (value) => {
     }
     return error;
 }
+export const validateKey = (value) => {
+    let error;
+    if (!value) {
+        error = '*Обязательное поле';
+    } 
+    return error;
+}

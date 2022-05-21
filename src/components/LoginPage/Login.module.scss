@@ -63,7 +63,8 @@ $error_color: rgb(241, 58, 58);
     flex-direction: column;
     margin: 5px 3vw 5px 3vw;
     font-size: 18px;
-    label{
+
+    label {
         margin-bottom: 3px;
     }
 }
@@ -132,4 +133,33 @@ $error_color: rgb(241, 58, 58);
 .error {
     font-size: 13px;
     color: $error_color;
+}
+
+.passwordContainer {
+    display: flex;
+    justify-content: end;
+    margin: 5px 3vw 5px 3vw;
+}
+
+.password {
+    color: #212529;
+    cursor: pointer;
+}
+
+.description {
+    text-align: center;
+
+    button {
+        border:none;
+        font-size: 16px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        background: none;
+    }
+}
+
+.display {
+    span {
+        display: none;
+    }
 }
