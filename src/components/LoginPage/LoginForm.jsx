@@ -1,5 +1,8 @@
-import { Field, Form, Formik } from 'formik';
-import style from './Login.module.scss'
+import { Form, Formik } from 'formik';
+import { MdAlternateEmail } from 'react-icons/md';
+import { RiLockPasswordLine } from 'react-icons/ri';
+import { ButtonSubmit } from '../fragments/ButtonSubmit';
+import Fieldjs from './Field';
 import { validateEmail, validatePassword } from './ValidateForm.tsx';
 
 
@@ -18,16 +21,15 @@ const LoginForm = (props) => {
             >
                 {({ errors, touched }) => (
                     <Form>
-                        <div className={style.form_block}>
-                            <label htmlFor="email">Почтовый адрес</label>
-                            <Field className={style.form_input} name="email" validate={validateEmail} />
-                            {errors.email && touched.email && <div>{errors.email}</div>}
-                        </div>
-                        <div className={style.form_block}>
-                            <label htmlFor="password">Пароль</label>
-                            <Field className={style.form_input} type='password' name="password" validate={validatePassword} />
-                            {errors.password && touched.password && <div >{errors.password}</div>}
-                        </div>
+                        <Fieldjs validate={validateEmail} label={'Почтовый адрес'}
+                            name={'email'} icon={MdAlternateEmail}
+                            errors={errors.email} touched={touched.email}
+                            type={'text'} />
+                        <Fieldjs validate={validatePassword} label={'Пароль'}
+                            name={'password'} icon={RiLockPasswordLine}
+                            errors={errors.password} touched={touched.password}
+                            type={'password'} />
+                        <ButtonSubmit />
                     </Form>
                 )}
             </Formik>

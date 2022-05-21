@@ -10,10 +10,13 @@ select:-webkit-autofill:focus {
     transition: background-color 5000s ease-in-out 0s;
 }
 
-$primary_color: rgb(216, 211, 211);
+$gray_color: rgb(216, 211, 211);
+$primary_color: rgb(83, 94, 243);
+$error_color: rgb(241, 58, 58);
 
 .container {
-    background-image: url(../../images/peizaj.jpg);
+    background: rgb(98, 119, 222);
+    background: linear-gradient(83deg, rgba(98, 119, 222, 1) 0%, rgba(244, 0, 255, 1) 100%);
     width: 100%;
     min-height: 100vh;
     background-repeat: no-repeat;
@@ -46,6 +49,7 @@ $primary_color: rgb(216, 211, 211);
 
     span {
         cursor: pointer;
+        border-bottom: 1px solid;
     }
 }
 
@@ -59,6 +63,9 @@ $primary_color: rgb(216, 211, 211);
     flex-direction: column;
     margin: 5px 3vw 5px 3vw;
     font-size: 18px;
+    label{
+        margin-bottom: 3px;
+    }
 }
 
 .form_input {
@@ -72,12 +79,12 @@ $primary_color: rgb(216, 211, 211);
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
-    background-color: $primary_color;
+    background-color: $gray_color;
     border: none;
 
     &:focus {
         outline: none;
-        box-shadow: 0px 0px 13px rgb(83, 94, 243);
+        box-shadow: 0px 0px 13px $primary_color;
     }
 }
 
@@ -87,7 +94,7 @@ $primary_color: rgb(216, 211, 211);
 }
 
 .form_button {
-    background-color: $primary_color;
+    background-color: $gray_color;
     outline: none;
     border: none;
     font-size: 24px;
@@ -98,12 +105,13 @@ $primary_color: rgb(216, 211, 211);
     cursor: pointer;
 
     &:hover {
-        background-color: rgb(224, 111, 209);
+        background-color: $primary_color;
+        box-shadow: 0px 0px 13px $primary_color;
     }
 }
 
 .errorStyle {
-    box-shadow: 0px 0px 13px rgb(241, 58, 58);
+    box-shadow: 0px 0px 13px $error_color;
 }
 
 .field_icon {
@@ -120,7 +128,8 @@ $primary_color: rgb(216, 211, 211);
         left: 10px;
     }
 }
-.error{
+
+.error {
     font-size: 13px;
-    color:red;
+    color: $error_color;
 }
