@@ -37,7 +37,7 @@ const SingupForm = () => {
                         errors={errors.userName} touched={touched.userName} 
                         type={'text'} />
 
-                    <ButtonSubmit />
+                    <ButtonSubmit text={'Отправить'}/>
                 </Form>
             )}
         </Formik>

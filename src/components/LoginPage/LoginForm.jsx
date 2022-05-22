@@ -32,7 +32,7 @@ const LoginForm = (props) => {
                             errors={errors.password} touched={touched.password}
                             type={'password'} />
                         <div className={style.passwordContainer}><div className={style.password} onClick={() => { props.setForm('Восстановление') }}>Забыли пароль?</div></div>
-                        <ButtonSubmit />
+                        <ButtonSubmit text={'Отправить'} />
                     </Form>
                 )}
             </Formik>

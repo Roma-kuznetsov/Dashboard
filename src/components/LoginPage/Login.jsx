@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import CodeForm from './CodeForm';
+import CreateNewPasswordForm from './CreateNewPasswordForm';
 import style from './Login.module.scss'
 import LoginForm from './LoginForm';
 import RefreshPassword from './RefreshPassword';
@@ -19,7 +20,7 @@ const Login = () => {
                         : form === 'Регистрация' ? <SingupForm />
                             : form === 'Восстановление' ? <RefreshPassword setForm={setForm} />
                                 : form === 'Подтверждение' ? < CodeForm setForm={setForm} />
-                                    : <div></div>}
+                                    : <CreateNewPasswordForm setForm={setForm} />}
                 </div>
                 <div className={style.swapForm}>
                     {form === 'Вход' ? <span onClick={() => { setForm('Регистрация') }}>Регистрация</span>

@@ -9,7 +9,6 @@ import { validateKey } from "./ValidateForm";
 
 
 let cx = classNames.bind(style);
-const data = null
 const CodeForm = (props) => {
 
     const [key, setKey] = useState('111')
@@ -33,6 +32,7 @@ const CodeForm = (props) => {
                 onSubmit={values => {
                     if (values.code === key) {
                         console.log(values);
+                        props.setForm('Создате новый пароль')
                         return
                     }
                 }}>
@@ -48,7 +48,7 @@ const CodeForm = (props) => {
                                 >Отправить код повторно</button>
                             <span> через {counter} секунд</span>
                         </div>
-                        <ButtonSubmit />
+                        <ButtonSubmit text={'Отпрвить'} />
                     </Form>
                 )}
             </Formik>

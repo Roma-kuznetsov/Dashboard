@@ -27,7 +27,7 @@ const RefreshPassword = (props) => {
                             name={'email'} icon={MdAlternateEmail}
                             errors={errors.email} touched={touched.email}
                             type={'text'} />
-                        <ButtonSubmit />
+                        <ButtonSubmit text={'Отправить'} />
                     </Form>
                 )}
             </Formik>
