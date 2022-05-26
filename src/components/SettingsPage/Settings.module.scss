@@ -1,0 +1,62 @@
+@import "../fragments/CommonStyles.scss";
+
+// style from avatar & input avatar
+.avatar_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: rgba(41, 28, 28, 0.445) 1px solid;
+    padding-bottom: 17px;
+}
+
+.SwitchAva {
+    display: flex;
+    justify-content: center;
+}
+
+.sub_SwitchAvatar {
+    position: relative;
+
+    &:hover {
+        label {
+            display: block;
+        }
+    }
+}
+
+.sub_title {
+    text-align: center;
+}
+
+.avatarButton {
+    display: none;
+    text-align: center;
+    background: rgba(53, 28, 28, 0.274);
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+
+    p {
+        font-size: 24px;
+        height: 20%;
+        display: block;
+        margin: 40% 0 40% 0;
+    }
+}
+
+.avatarInput {
+    display: none;
+}
+
+.avatar {
+    display: block;
+    width: 200px;
+    height: 200px;
+}
+//other
+.section_block{
+    margin-bottom: 50px;
+}

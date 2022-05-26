@@ -1,25 +1,4 @@
-%field_shared {
-    border-bottom: rgba(41, 28, 28, 0.445) 1px solid;
-    display: flex;
-}
-
-.container {
-    width: 66%;
-    height: 100%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-}
-
-.title {
-    justify-content: center;
-    @extend %field_shared;
-}
-
-.field {
-    @extend %field_shared;
-    justify-content: space-between;
-}
+@import "../fragments/CommonStyles.scss";
 
 .field_text {
     text-decoration: underline;
