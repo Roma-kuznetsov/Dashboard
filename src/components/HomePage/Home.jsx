@@ -9,20 +9,21 @@ import Navbar from './Navbar';
 
 const Home = () => {
     const [isAuth, setisAuth] = useState(true)
+    const [bg,setBg] = useState('linear-gradient(83deg, #6277de 0%, #f400ff 100%)')
 
 
     if (!isAuth) {
         return (<Navigate to="/login" />);
     } else {
         return (
-            <section className={style.container}>
+            <section className={style.container} style={{'background': bg}}>
                 <div className={style.block}>
                     <Navbar />
                     <div className={style.content}>
                             <Routes>
                                 <Route path="account" element={<Account />} />
                                 <Route path="tasks" element={<Task />} />
-                                <Route path="settings" element={<Settings />} />
+                                <Route path="settings" element={<Settings setBg={setBg} />} />
                             </Routes>
                     </div>
                 </div>

@@ -1,14 +1,15 @@
 import React from "react";
 import style from './Settings.module.scss';
 import defaultAvatar from '../../images/avatar.jpg';
-import Slider from '../fragments/Slider'
 import SettingsFragment from './SettingsFragment.jsx'
+import SettingsUI from './SettingsUI'
 
 
-const Settings = () => {
 
+const Settings = (props) => {
     return (
         <section className={style.container}>
+            <div className={style.block}>
                 <div className={style.title}>
                     <h1>Настройки</h1>
                 </div>
@@ -25,22 +26,15 @@ const Settings = () => {
                         </div>
                     </div>
                 </div>
-
                 <div className={style.field}>
                     <h1>Почта</h1>
-                    <h1>{'ksfiSF@mail.ru'}</h1>
+                    <p>{'ksfiSF@mail.ru'}</p>
                 </div>
+                <SettingsFragment title={'Имя'} name={'clown'} />
+            </div>
 
-                <SettingsFragment title={'Имя'} name={'clown'}/>
+            <SettingsUI setBg={props.setBg} />
 
-                <div className={style.field}>
-                    <h1>Пароль</h1>
-                    <h1></h1>
-                    <button>Изменить</button>
-                </div>
-                <div className={style.title}>
-                    <button>Save</button>
-                </div>
         </section >
     );
 }
