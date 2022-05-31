@@ -18,26 +18,28 @@ const SettingsUI = (props) => {
     const [rotate, setRotate] = useState(83)
     const [show, setShow] = useState(false)
 
+
     //предварительный просмотр
     useEffect(() => {
         let bg = `linear-gradient(${rotate}deg, ${firstColor} ${minValue}%, ${secondColor} ${maxValue}%)`
         props.setBg(bg)
     }, [rotate, firstColor, minValue, secondColor, maxValue]);
     // show true/false classnames
+    console.log("render")
     let mixStyles = cx({
         respons: true,
         active: show,
     });
 
-    const dubleMinMax = (value, fun) => {
-        if (value > 100) {
-            fun(100)
-        } else if (value < 0 || value === '') {
-            fun(0)
-        } else {
-            fun(value)
-        }
-    }
+    // const dubleMinMax = (value, fun) => {
+    //     if (value > 100) {
+    //         fun(100)
+    //     } else if (value < 0 || value === '') {
+    //         fun(0)
+    //     } else {
+    //         fun(value)
+    //     }
+    // }
     // default from multi-range-slider-react
     const handleInput = (e) => {
         setMinValue(e.minValue);
@@ -81,8 +83,8 @@ const SettingsUI = (props) => {
                     }}
                 />
                 <div className={style.ui_block}>
-                    <input value={minValue} type="number" onChange={(e) => { dubleMinMax(e.currentTarget.value, setMinValue) }} />
-                    <input value={maxValue} type="number" onChange={(e) => { dubleMinMax(e.currentTarget.value, setMaxValue) }} />
+                    <input value={minValue} type="number" max='100' onChange={(e) => { setMinValue(0 + parseInt(e.currentTarget.value) || 0) }} />
+                    <input value={maxValue} type="number" max='100' onChange={(e) => { setMaxValue(0 + parseInt(e.currentTarget.value) || 0) }} />
                 </div>
                 <div>
                     <input style={{ 'width': '100%' }} type="range" min='0' max='360' value={rotate}
