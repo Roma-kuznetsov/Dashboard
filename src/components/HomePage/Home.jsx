@@ -11,15 +11,6 @@ import Navbar from './Navbar';
 const Home = () => {
     const [isAuth, setisAuth] = useState(true)
     const [bg, setBg] = useState('linear-gradient(83deg, #6277de 0%, #f400ff 100%)')
-    const task1 = [{
-        id: 1, name: 'begin',
-        tasks: [{ id: 11, title: 'Первая задача', description: 'lorem lorem lorem' },
-        { id: 12, title: 'Всторая задача', description: 'lorem lorem lorem' },
-        { id: 13, title: 'Третья задача', description: 'lorem lorem lorem' }]
-    }
-
-        , [{ id: 2, name: 'inProcces', tasks: [{ id: 21, title: 'site', description: 'lorem lorem lorem' }] }]]
-
     const OllTasks = [
         {id: 1, name: 'begin', tasks: [{ id: 11, title: 'Первая задача', description: 'lorem lorem lorem' },
         { id: 12, title: 'Первая задача1', description: 'lorem lorem lorem' }]},
@@ -28,7 +19,7 @@ const Home = () => {
     ]
     if (!isAuth) {
         return (<Navigate to="/login" />);
-    } else {
+    } else { 
         return (
             <section className={style.container} style={{ 'background': bg }}>
                 <div className={style.block}>
@@ -38,7 +29,7 @@ const Home = () => {
                             <Route path="account" element={<Account />} />
                             <Route path="tasks" element={<Task task1={OllTasks} />} />
                             <Route path="groups" element={<Group />} />
-                            <Route path="settings" element={<Settings setBg={setBg} />} />
+                            <Route path="settings" element={<Settings bg={bg} setBg={setBg} />} />
                         </Routes>
                     </div>
                 </div>

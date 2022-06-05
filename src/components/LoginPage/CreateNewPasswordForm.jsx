@@ -21,9 +21,9 @@ const CreateNewPasswordForm = (props) => {
                 {({ errors, touched }) => (
                     <Form>
                         <Fieldjs validate={validatePassword} label={'Пароль'}
-                        name={'newPassword'} icon={RiLockPasswordLine}
-                        errors={errors.newPassword} touched={touched.newPassword}
-                        type={'password'} />
+                            name={'newPassword'} icon={RiLockPasswordLine}
+                            errors={errors.newPassword} touched={touched.newPassword}
+                            type={'password'} />
                         <ButtonSubmit text={'Отправить'} />
                     </Form>
                 )}

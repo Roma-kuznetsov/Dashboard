@@ -10,7 +10,6 @@ import { validateKey } from "./ValidateForm";
 
 let cx = classNames.bind(style);
 const CodeForm = (props) => {
-
     const [key, setKey] = useState('111')
     const [counter, setCounter] = useState(120);
     useEffect(() => {
